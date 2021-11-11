@@ -1,0 +1,23 @@
+<ion-view title="注册" hide-nav-bar="true" id="page7" class=" ">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <form id="page7-form2" class="list ">
+            <div class="spacer" style="width: 300px; height: 0px;"></div>
+            <h3 id="page7-heading2" style="color:#0A59A3;font-weight:400;text-align:center;" class=" ">软院之生</h3>
+            <div class="spacer" style="width: 300px; height: 49px;"></div>
+            <ion-list id="page7-list2" class=" ">
+                <label class="item item-input " id="page7-input4">
+                    <input type="text" placeholder="用户名" ng-model="user.username">
+                </label>
+                <label class="item item-input " id="page7-input5">
+                    <input type="password" placeholder="初次输入密码" ng-model="user.password">
+                </label>
+                <label class="item item-input " id="page7-input6">
+                    <input type="password" placeholder="再次输入密码" ng-model="user.password2">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 32px;"></div>
+            <a  id="page7-button3" style="border-radius:11px 11px 11px 11px;" class=" button button-positive  button-block icon-left ion-ios-contact-outline " ng-click="regist(user)" >注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a ui-sref="page6" id="page7-button4" class=" button button-positive  button-block button-clear ">使用已有账户登录</a>
+        </form>
+    </ion-content>
+</ion-view>

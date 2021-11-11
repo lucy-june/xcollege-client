@@ -1,0 +1,35 @@
+<ion-view title="问题解答" id="page8" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+        <ion-list id="page8-list8" class=" ">
+            <ion-item class="item-avatar  " id="page8-list-item22">
+                <img src="https://robohash.org/{{question.username}}/bgset_bg2">
+                <h2>{{question.username}}</h2>
+                <p style="white-space:normal;"><strong>{{question.question}}</strong></p>
+            </ion-item>
+        </ion-list>
+        <form id="page8-form5" class="list ">
+            <label class="item item-input " id="page8-input9">
+                <input type="text" placeholder="请输入您的答案" ng-model="q.answer">
+            </label>
+        </form>
+        <button id="page8-button8" class=" button button-positive  button-block " ng-click="addA(q)">提交答案</button>
+
+
+        <ion-list>
+
+        <div class="list card"  ng-repeat="answer in question.answers.slice().reverse()">
+            <ion-item class="item-icon-right">
+                <img src="https://robohash.org/{{answer.username}}/bgset_bg2" style="height:25px;width:25px">
+                <i class="icon ion-eye"></i>
+            </ion-item>
+            <div class="" >
+                <p  style=" margin-left:10px; margin-top:15px;color:#000000;" class=" ">
+                   <strong>{{answer.username}}: &nbsp;&nbsp;</strong> {{answer.answer}}
+                </p>
+            </div>
+        </div>
+       
+        </ion-list>
+    </ion-content>
+</ion-view>

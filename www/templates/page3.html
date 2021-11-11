@@ -1,0 +1,22 @@
+<ion-view title="问答社区" id="page3" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+        <form id="page3-form3" class="list ">
+            <label class="item item-input " id="page3-input8">
+                <input type="text" placeholder="请输入您的问题" ng-model="q.question">
+            </label>
+            <button id="page3-button6" style="border-radius:11px 11px 11px 11px;" class=" button button-positive  button-block button-outline icon-left ion-android-add-circle " ng-click="addQ(q)">发表问题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        </form>
+
+        <ion-list>
+            <ion-item ng-repeat="question in questions.slice().reverse()" class="item-avatar" href="#/page1/answer/{{question.id}}">
+                <img src="https://robohash.org/{{question.username}}/bgset_bg2">
+                <h2>{{question.username}}</h2>
+                <p style="white-space:normal;">{{question.question}}</p>
+            </ion-item>
+        </ion-list>
+         
+    </ion-content>
+</ion-view>
+
+

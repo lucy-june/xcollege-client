@@ -1,0 +1,23 @@
+<ion-view title="个人主页" id="page11" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="page11-list12" class=" ">
+            <ion-item class="item-avatar item-icon-right  " id="page11-list-item58">
+                <img src="https://robohash.org/{{user.username}}/bgset_bg2">
+                <h2>{{user.username}}</h2>
+
+                <a href="#/login"><i class="icon ion-log-out" ></i></a>
+            </ion-item>
+        </ion-list>
+       
+       <div ng-show="!have" style="margin-top:30px; text-align:center">您尚未在问答社区提出问题</div>
+
+        <ion-list>
+             <div class="list card " ng-repeat="question in questions.slice().reverse()">
+            <ion-item  class="item-icon-left" href="#/page1/answer/{{question.id}}">
+                <i class="icon ion-ios-help-outline"></i><p style="white-space:normal;">{{question.question}}</p></ion-item>
+            </ion-item>
+            </div>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
