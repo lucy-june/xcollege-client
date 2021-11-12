@@ -1,8 +1,9 @@
 # Development Environment
-nodejs: v4.4.4
-npm: v2.15.1
-ionic: 1.7.15
-
+Install nodejs(include node + npm): https://nodejs.org/dist/v4.4.4/node-v4.4.4-x64.msi
+  - node: v4.4.4
+  - npm: v2.15.1
+Install ionic by running: $ npm install -g ionic@1.7.15
+  - ionic: 1.7.15
 
 #######run ionic client as web#######
 1. $ npm install
